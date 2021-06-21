@@ -5,7 +5,7 @@ import Header from './Header';
 export default class Route extends React.Component {
     render() {
         return (
-            <Router forceRefresh={true}>
+            <Router forceRefresh={false}>
                 <Header />
                 <Switch>
                     {/* <Route path="/" exact>

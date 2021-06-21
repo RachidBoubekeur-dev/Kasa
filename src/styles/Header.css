@@ -1,3 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+.ulHeader {
+  list-style: none;
+  display: flex;
+  margin: 1em;
+  padding: 0em;
+  width: auto;
+  justify-content: flex-end;
+}
+.ulHeader > .active {
+  text-decoration: underline;
+}
+.ulHeader > a {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: #FF6060;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.ulHeader > a:hover {
+  text-decoration: underline;
+}
+.ulHeader > a:nth-child(1) {
+  flex: auto;
+}
+.ulHeader > a:nth-child(1) > li > img {
+  width: 125px;
+}
+.ulHeader > a:nth-child(2), .ulHeader > a:nth-child(3) {
+  align-self: center;
+  margin-left: 1em;
+}
 
 /*# sourceMappingURL=Header.css.map */

@@ -6,7 +6,7 @@ import '../styles/Header.css';
 export default class Header extends React.Component {
     render () {
         return (
-            <ul>
+            <ul className="ulHeader">
                 <NavLink exact to="/">
                     <li><img src={logo} alt="Logo Kasa" /></li>
                 </NavLink>
