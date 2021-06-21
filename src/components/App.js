@@ -1,7 +1,11 @@
+import Route from './Route'
 import '../styles/App.css';
 
 const App = () => {
-  return ();
+  return (
+    <Route />
+    // <Footer/>
+  );
 };
 
 export default App;
