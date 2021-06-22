@@ -1,2 +1,10 @@
 @import './utils/variables';
 @import './utils/mixins';
+
+.divApp {
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em;
+    width: 90%;
+}

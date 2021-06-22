@@ -1,10 +1,12 @@
-import Route from './Route'
+import Routing from './Routing'
 import '../styles/App.css';
 
 const App = () => {
   return (
-    <Route />
-    // <Footer/>
+    <div className="divApp">
+      <Routing />
+    {/* <Footer /> */}
+    </div>
   );
 };
 

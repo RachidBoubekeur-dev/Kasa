@@ -1,32 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-.ulHeader {
+.navHeader > ul {
   list-style: none;
   display: flex;
-  margin: 1em;
-  padding: 0em;
-  width: auto;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-inline-start: 0px;
 }
-.ulHeader > .active {
+.navHeader > ul > .active {
   text-decoration: underline;
 }
-.ulHeader > a {
+.navHeader > ul > a {
   font-family: "Montserrat";
   font-weight: bold;
   color: #FF6060;
   text-decoration: none;
   font-size: 0.8em;
 }
-.ulHeader > a:hover {
+.navHeader > ul > a:hover {
   text-decoration: underline;
 }
-.ulHeader > a:nth-child(1) {
+.navHeader > ul > a:nth-child(1) {
   flex: auto;
 }
-.ulHeader > a:nth-child(1) > li > img {
+.navHeader > ul > a:nth-child(1) > li > img {
   width: 125px;
 }
-.ulHeader > a:nth-child(2), .ulHeader > a:nth-child(3) {
+.navHeader > ul > a:nth-child(2), .navHeader > ul > a:nth-child(3) {
   align-self: center;
   margin-left: 1em;
 }

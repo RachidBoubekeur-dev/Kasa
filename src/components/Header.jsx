@@ -6,17 +6,19 @@ import '../styles/Header.css';
 export default class Header extends React.Component {
     render () {
         return (
-            <ul className="ulHeader">
-                <NavLink exact to="/">
-                    <li><img src={logo} alt="Logo Kasa" /></li>
-                </NavLink>
-                <NavLink exact to="/">
-                    <li>ACCUEIL</li>
-                </NavLink>
-                <NavLink exact to="/about">
-                    <li>A PROPOS</li>
-                </NavLink>
-            </ul>
+            <nav className="navHeader">
+                <ul>
+                    <NavLink exact to="/">
+                        <li><img src={logo} alt="Logo Kasa" /></li>
+                    </NavLink>
+                    <NavLink exact to="/">
+                        <li>ACCUEIL</li>
+                    </NavLink>
+                    <NavLink exact to="/about">
+                        <li>A PROPOS</li>
+                    </NavLink>
+                </ul>
+            </nav>
         );
     };
 };
