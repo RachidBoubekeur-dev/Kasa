@@ -5,28 +5,48 @@
   justify-content: flex-start;
   padding-inline-start: 0px;
 }
-.navHeader > ul > .active {
-  text-decoration: underline;
-}
-.navHeader > ul > a {
+.navHeader > ul > li {
   font-family: "Montserrat";
   font-weight: bold;
-  color: #FF6060;
-  text-decoration: none;
   font-size: 0.8em;
 }
-.navHeader > ul > a:hover {
+.navHeader > ul > li > a {
+  color: #FF6060;
+  text-decoration: none;
+}
+.navHeader > ul > li > .active {
   text-decoration: underline;
 }
-.navHeader > ul > a:nth-child(1) {
+.navHeader > ul > li:hover {
+  text-decoration: underline;
+}
+.navHeader > ul > li:nth-child(1) {
   flex: auto;
 }
-.navHeader > ul > a:nth-child(1) > li > img {
+.navHeader > ul > li:nth-child(1) > a > img {
   width: 125px;
 }
-.navHeader > ul > a:nth-child(2), .navHeader > ul > a:nth-child(3) {
+.navHeader > ul > li:nth-child(2), .navHeader > ul > li:nth-child(3) {
   align-self: center;
   margin-left: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .navHeader {
+    margin-top: 1.5em;
+  }
+  .navHeader > ul > li {
+    font-size: 1em;
+  }
+  .navHeader > ul > li:nth-child(1) {
+    flex: auto;
+  }
+  .navHeader > ul > li:nth-child(1) > a > img {
+    width: 150px;
+  }
+  .navHeader > ul > li:nth-child(2), .navHeader > ul > li:nth-child(3) {
+    margin-left: 2.7em;
+  }
 }
 
 /*# sourceMappingURL=Header.css.map */

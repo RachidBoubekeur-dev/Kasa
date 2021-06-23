@@ -6,15 +6,15 @@ const Header = () => {
     return (
         <nav className="navHeader">
             <ul>
-                <NavLink exact to="/">
-                    <li><img src={logo} alt="Logo Kasa" /></li>
-                </NavLink>
-                <NavLink exact to="/">
-                    <li>ACCUEIL</li>
-                </NavLink>
-                <NavLink exact to="/about">
-                    <li>A PROPOS</li>
-                </NavLink>
+                <li>
+                    <NavLink exact to="/"><img src={logo} alt="Logo Kasa" /></NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/">Accueil</NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/about">A Propos</NavLink>
+                </li>
             </ul>
         </nav>
     )
