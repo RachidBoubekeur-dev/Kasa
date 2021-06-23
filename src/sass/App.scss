@@ -7,4 +7,31 @@
     margin-right: auto;
     padding: 0em;
     width: 90%;
+    & > .divLoading {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        animation: loading 150ms;
+        animation-delay: 2900ms;
+        & > img {
+            width: auto;
+            position: fixed;
+            align-self: center;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
