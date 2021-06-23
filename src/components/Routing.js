@@ -4,11 +4,11 @@ import Header from './Header';
 import Home from './Home';
 import Housing from './Housing';
 
-const Routing = () => {
+const Routing = ({ setLoading }) => {
     const [housingsData, setHousingsData] = useState([]);
 
     useEffect(() => {
-        fetch('http://192.168.1.20:3000/housings.json')
+        fetch('http://localhost:3000/housings.json')
             .then(response => response.json())
             .then(data => setHousingsData(data['housings']))
     }, []);
@@ -18,10 +18,10 @@ const Routing = () => {
             <Header />
             <Switch>
                 <Route path="/" exact>
-                    <Home housingsData={housingsData} />
+                    <Home housingsData={housingsData} setLoading={setLoading} />
                 </Route>
                 <Route path="/housing/:index" exact>
-                    <Housing housingsData={housingsData} />
+                    <Housing housingsData={housingsData} setLoading={setLoading} />
                 </Route>
                 {/* <Route path="/about" exact>
                     <About />

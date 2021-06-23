@@ -1,10 +1,17 @@
 import { useParams } from 'react-router-dom';
 
-const Housing = ({ housingsData }) => {
-    const { index } = useParams();
+const Housing = ({ housingsData, setLoading }) => {
+    let { index } = useParams();
+    index = parseInt(index);
     console.log(housingsData);
-    console.log(index);
-    return index
+    const closeLoading = () => { setTimeout(() => { setLoading(false) }, 2000)};
+    // window.document.title = housingsData[0].title;
+    return (
+        <div>
+            <p>{index}</p>
+            {closeLoading()}
+        </div>
+    )
 };
 
 export default Housing

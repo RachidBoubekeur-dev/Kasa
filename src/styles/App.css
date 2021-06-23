@@ -16,22 +16,11 @@
   top: 0px;
   left: 0px;
   z-index: 1;
-  animation: loading 150ms;
-  animation-delay: 2900ms;
 }
 .divApp > .divLoading > img {
   width: auto;
   position: fixed;
   align-self: center;
-}
-
-@keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 /*# sourceMappingURL=App.css.map */
