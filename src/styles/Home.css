@@ -1,18 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-.mainHome > article {
+.mainHome > section > article:nth-of-type(1) {
   display: flex;
   box-shadow: 0px 0px 8px 0px #d6d6d6;
   border-radius: 10px;
+  margin-bottom: 2em;
 }
-.mainHome > article > img {
+.mainHome > section > article:nth-of-type(1) > img {
   width: 100%;
-  height: 111px;
+  min-height: 111px;
+  max-height: 185px;
   border-radius: 10px;
   object-fit: cover;
   object-position: revert;
   filter: brightness(0.7);
 }
-.mainHome > article > h2 {
+.mainHome > section > article:nth-of-type(1) > h2 {
   font-family: "Montserrat";
   font-weight: normal;
   position: absolute;
@@ -20,31 +22,102 @@
   margin-top: 1em;
   color: white;
 }
-.mainHome > article > h2 > span {
+.mainHome > section > article:nth-of-type(1) > h2 > span {
   display: block;
 }
-.mainHome > div > article {
+.mainHome > section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainHome > section > div > .housing {
   display: flex;
   align-items: flex-end;
   box-shadow: 0px 0px 8px 0px #d6d6d6;
   border-radius: 10px;
-  margin-top: 1em;
+  margin-bottom: 1.5em;
+  max-width: 340px;
+  height: 255px;
+  max-height: 340px;
+  cursor: pointer;
 }
-.mainHome > div > article > img {
+.mainHome > section > div > .housing > img {
   width: 100%;
   height: 255px;
   border-radius: 10px;
   object-fit: cover;
   object-position: revert;
   filter: brightness(0.7);
+  transition: all 0.4s;
 }
-.mainHome > div > article > h2 {
+.mainHome > section > div > .housing > img:hover, .mainHome > section > div > .housing > img:active, .mainHome > section > div > .housing > img:focus {
+  filter: brightness(0.6);
+}
+.mainHome > section > div > .housing > h2 {
   font-family: "Montserrat";
   font-weight: normal;
   position: absolute;
   margin-left: 0.6em;
   width: 81%;
+  max-width: 320px;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .mainHome > section > article:nth-of-type(1) {
+    justify-content: center;
+    align-items: center;
+  }
+  .mainHome > section > article:nth-of-type(1) > h2 {
+    margin-top: 0.7em;
+    margin-left: 0em;
+    font-size: 1.7em;
+  }
+  .mainHome > section > article:nth-of-type(1) > h2 > span {
+    display: inline-block;
+  }
+  .mainHome > section > div {
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
+  .mainHome > section > div > .housing {
+    width: 340px;
+    height: 340px;
+  }
+  .mainHome > section > div > .housing > img {
+    height: 340px;
+  }
+}
+@media screen and (min-width: 868px) {
+  .mainHome > section > article:nth-of-type(1) > h2 {
+    font-size: 2em;
+  }
+  .mainHome > section > div {
+    background: #F6F6F6;
+    border-radius: 25px;
+    padding: 2.5em;
+    padding-top: 3em;
+  }
+  .mainHome > section > div > .housing {
+    margin-bottom: 3.5em;
+  }
+}
+@media screen and (min-width: 1256px) {
+  .mainHome > section > article:nth-of-type(1) > h2 {
+    font-size: 2.4em;
+  }
+  .mainHome > section > div {
+    background: #F6F6F6;
+    border-radius: 25px;
+    padding: 2.5em;
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+  }
+  .mainHome > section > div > .housing {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 /*# sourceMappingURL=Home.css.map */
