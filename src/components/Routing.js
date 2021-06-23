@@ -8,7 +8,7 @@ const Routing = ({ setLoading }) => {
     const [housingsData, setHousingsData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/housings.json')
+        fetch('http://192.168.1.20:3000/housings.json')
             .then(response => response.json())
             .then(data => setHousingsData(data['housings']))
     }, []);
