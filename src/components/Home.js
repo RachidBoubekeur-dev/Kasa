@@ -19,7 +19,7 @@ const Home = ({ housingsData, setLoading }) => {
                         <img src={cover} alt={title} />
                         <h2>{title}</h2>
                     </article>
-                ))) : (<Error code="404" />)}
+                ))) : (<Error code="504" setLoading={setLoading} />)}
                 </div>
             </section>
             {closeLoading()}
