@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 .navHeader > ul {
   list-style: none;
   display: flex;
@@ -13,6 +13,7 @@
 .navHeader > ul > li > a {
   color: #FF6060;
   text-decoration: none;
+  font-weight: 500;
 }
 .navHeader > ul > li > .active {
   text-decoration: underline;
