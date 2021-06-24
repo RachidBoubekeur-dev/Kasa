@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import '../styles/Housing.css';
 
 const Housing = ({ housingsData, setLoading }) => {
     let { index } = useParams();
