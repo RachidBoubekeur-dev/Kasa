@@ -1,19 +1,21 @@
 import { NavLink } from 'react-router-dom';
 import '../styles/Error.css';
 
-const Error = ({ code, setLoading }) => {
-    const closeLoading = () => { setTimeout(() => { setLoading(false) }, 2000) };
-
+const Error = ({ code }) => {
+    let messageError;
+    if (code === '404')
+        messageError = "Oups! La page que vous demandez n'existe pas.";
+    else messageError = "Oups! Le serveur n'a pas répondu.";
+    window.document.title = `${code} - ${messageError}`;
     return (
         <div className="divError">
             <h2>{code}</h2>
-            {code === "404" ?
-                (<p>Oups! La page que vous demandez n'existe pas.</p>) :
-                (<p>Oups! Le serveur n'a pas répondu.</p>)}
-            <NavLink to="/" exact>Retourner sur la page d’accueil</NavLink>
-            {closeLoading()}
+            <p>{messageError}</p>
+            <NavLink to="/" exact>
+                Retourner sur la page d’accueil
+            </NavLink>
         </div>
-    )
+    );
 };
 
-export default Error
+export default Error;

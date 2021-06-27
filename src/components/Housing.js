@@ -1,18 +1,27 @@
 import { useParams } from 'react-router-dom';
+import Error from './Error';
 import '../styles/Housing.css';
 
-const Housing = ({ housingsData, setLoading }) => {
-    let { index } = useParams();
-    index = parseInt(index);
-    console.log(housingsData);
-    const closeLoading = () => { setTimeout(() => { setLoading(false) }, 2000)};
-    // window.document.title = housingsData[0].title;
+const Housing = ({ housingsData }) => {
+    const { id } = useParams();
     return (
         <div>
-            <p>{index}</p>
-            {closeLoading()}
+            <p>{id}</p>
+            {housingsData.length > 0 ? (
+                housingsData.map(
+                    (house) =>
+                        house.id === id && (
+                            <div key={house.id}>
+                                <p>{(window.document.title = house.title)}</p>
+                                <p>{house.cover}</p>
+                            </div>
+                        )
+                )
+            ) : (
+                <Error code="504" />
+            )}
         </div>
-    )
+    );
 };
 
-export default Housing
+export default Housing;

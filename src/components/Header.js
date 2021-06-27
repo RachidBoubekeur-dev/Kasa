@@ -7,17 +7,23 @@ const Header = () => {
         <nav className="navHeader">
             <ul>
                 <li>
-                    <NavLink exact to="/"><img src={logo} alt="Logo Kasa" /></NavLink>
+                    <NavLink exact to="/">
+                        <img src={logo} alt="Logo Kasa" />
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink exact to="/">Accueil</NavLink>
+                    <NavLink exact to="/">
+                        Accueil
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink exact to="/about">A Propos</NavLink>
+                    <NavLink exact to="/about">
+                        A Propos
+                    </NavLink>
                 </li>
             </ul>
         </nav>
-    )
+    );
 };
 
-export default Header
+export default Header;

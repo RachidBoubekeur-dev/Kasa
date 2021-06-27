@@ -5,7 +5,7 @@ import Home from './Home';
 import Housing from './Housing';
 import Error from './Error';
 
-const Routing = ({ setLoading }) => {
+const Routing = () => {
     const [housingsData, setHousingsData] = useState([]);
 
     useEffect(() => {
@@ -15,20 +15,20 @@ const Routing = ({ setLoading }) => {
     }, []);
 
     return (
-        <Router forceRefresh={true}>
+        <Router forceRefresh={false}>
             <Header />
             <Switch>
                 <Route path="/" exact>
-                    <Home housingsData={housingsData} setLoading={setLoading} />
+                    <Home housingsData={housingsData} />
                 </Route>
-                <Route path="/housing/:index" exact>
-                    <Housing housingsData={housingsData} setLoading={setLoading} />
+                <Route path="/housing/:id" exact>
+                    <Housing housingsData={housingsData} />
                 </Route>
                 {/* <Route path="/about" exact>
                     <About />
                 </Route> */}
                 <Route path="/">
-                    <Error code="404" setLoading={setLoading} />
+                    <Error code="404" />
                 </Route>
             </Switch>
         </Router>

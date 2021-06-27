@@ -5,22 +5,26 @@ import imgLoading from '../assets/loading.gif';
 import '../styles/App.css';
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => { setLoading(true); }, []);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 3000);
+    }, []);
 
-  return (
-    <div className="divApp">
-      {loading && (
-        <div className="divLoading">
-          <img src={imgLoading} alt="Chargement de la page..." />
+    return (
+        <div className="divApp">
+            {loading && (
+                <div className="divLoading">
+                    <img src={imgLoading} alt="Chargement de la page..." />
+                </div>
+            )}
+            <div>
+                <Routing />
+                <Footer />
+            </div>
         </div>
-      )}
-      <div>
-        <Routing setLoading={setLoading} />
-        <Footer />
-      </div>
-    </div>
-  )
+    );
 };
 
 export default App;
