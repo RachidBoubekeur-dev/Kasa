@@ -1,5 +1,4 @@
 @import './utils/variables';
-@import './utils/mixins';
 
 .divApp {
     margin: 1em;
@@ -7,7 +6,8 @@
     margin-right: auto;
     padding: 0em;
     width: 90%;
-    & > .divLoading {
+    max-width: 1585px;
+    & > div > .divLoading {
         background-color: white;
         width: 100%;
         height: 100%;

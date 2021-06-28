@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
 }
-.mainHome > section > div > .housing {
+.mainHome > section > div > .housing > a {
   display: flex;
   align-items: flex-end;
   box-shadow: 0px 0px 8px 0px #d6d6d6;
@@ -41,20 +41,21 @@
   height: 255px;
   max-height: 340px;
   cursor: pointer;
+  filter: brightness(1);
+  transition: all 0.4s;
 }
-.mainHome > section > div > .housing > img {
+.mainHome > section > div > .housing > a:hover, .mainHome > section > div > .housing > a:active, .mainHome > section > div > .housing > a:focus {
+  filter: brightness(0.85);
+}
+.mainHome > section > div > .housing > a > img {
   width: 100%;
   height: 255px;
   border-radius: 10px;
   object-fit: cover;
   object-position: revert;
   filter: brightness(0.7);
-  transition: all 0.4s;
 }
-.mainHome > section > div > .housing > img:hover, .mainHome > section > div > .housing > img:active, .mainHome > section > div > .housing > img:focus {
-  filter: brightness(0.6);
-}
-.mainHome > section > div > .housing > h2 {
+.mainHome > section > div > .housing > a > h2 {
   font-family: "Montserrat";
   font-weight: normal;
   position: absolute;
@@ -82,11 +83,11 @@
     justify-content: space-between;
     flex-flow: wrap;
   }
-  .mainHome > section > div > .housing {
+  .mainHome > section > div > .housing > a {
     width: 340px;
     height: 340px;
   }
-  .mainHome > section > div > .housing > img {
+  .mainHome > section > div > .housing > a > img {
     height: 340px;
   }
 }
@@ -95,12 +96,13 @@
     font-size: 2em;
   }
   .mainHome > section > div {
-    background: #F6F6F6;
+    background: #f6f6f6;
     border-radius: 25px;
     padding: 2.5em;
     padding-top: 3em;
+    padding-bottom: 0em;
   }
-  .mainHome > section > div > .housing {
+  .mainHome > section > div > .housing > a {
     margin-bottom: 3.5em;
   }
 }
@@ -109,13 +111,13 @@
     font-size: 2.4em;
   }
   .mainHome > section > div {
-    background: #F6F6F6;
+    background: #f6f6f6;
     border-radius: 25px;
     padding: 2.5em;
     padding-top: 3em;
     padding-bottom: 1.5em;
   }
-  .mainHome > section > div > .housing {
+  .mainHome > section > div > .housing > a {
     margin-left: 5px;
     margin-right: 5px;
   }

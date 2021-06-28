@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 .divApp {
   margin: 1em;
   margin-left: auto;
   margin-right: auto;
   padding: 0em;
   width: 90%;
+  max-width: 1585px;
 }
-.divApp > .divLoading {
+.divApp > div > .divLoading {
   background-color: white;
   width: 100%;
   height: 100%;
@@ -17,7 +18,7 @@
   left: 0px;
   z-index: 1;
 }
-.divApp > .divLoading > img {
+.divApp > div > .divLoading > img {
   width: auto;
   position: fixed;
   align-self: center;
