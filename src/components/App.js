@@ -1,25 +1,13 @@
-import { useState } from 'react';
+import { Component } from 'react';
 import Routing from './Routing';
-import Footer from './Footer';
-import imgLoading from '../assets/loading.gif';
 import '../styles/App.css';
 
-const App = () => {
-    const [loading, setLoading] = useState(true);
-
-    return (
-        <div className="divApp">
-            {loading && (
-                <div className="divLoading">
-                    <img src={imgLoading} alt="Chargement de la page..." />
-                </div>
-            )}
-            <div>
-                <Routing setLoading={setLoading} />
-                <Footer />
+export default class App extends Component {
+    render() {
+        return (
+            <div className="divApp">
+                <Routing />
             </div>
-        </div>
-    );
-};
-
-export default App;
+        );
+    }
+}
