@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Routing from './Routing';
 import Footer from './Footer';
 import imgLoading from '../assets/loading.gif';
@@ -6,11 +6,6 @@ import '../styles/App.css';
 
 const App = () => {
     const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 3000);
-    }, []);
 
     return (
         <div className="divApp">
@@ -20,7 +15,7 @@ const App = () => {
                 </div>
             )}
             <div>
-                <Routing />
+                <Routing setLoading={setLoading} />
                 <Footer />
             </div>
         </div>

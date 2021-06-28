@@ -6,7 +6,9 @@ import '../styles/Home.css';
 const Home = ({ housingsData }) => {
     window.document.title =
         'Kasa - leaders de la location d’appartements entre particuliers en France';
+
     const history = useHistory();
+
     return (
         <main className="mainHome">
             <section>

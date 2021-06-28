@@ -4,19 +4,19 @@ import '../styles/Housing.css';
 
 const Housing = ({ housingsData }) => {
     const { id } = useParams();
+    const houseData = housingsData.filter((house) => {
+        return house.id === id;
+    });
     return (
         <div>
-            <p>{id}</p>
-            {housingsData.length > 0 ? (
-                housingsData.map(
-                    (house) =>
-                        house.id === id && (
-                            <div key={house.id}>
-                                <p>{(window.document.title = house.title)}</p>
-                                <p>{house.cover}</p>
-                            </div>
-                        )
-                )
+            {houseData.length > 0 ? (
+                houseData.map((house) => (
+                    <div key={house.id}>
+                        <p>{(window.document.title = house.title)}</p>
+                        <p>{house.cover}</p>
+                        <p>{house.id}</p>
+                    </div>
+                ))
             ) : (
                 <Error code="504" />
             )}
