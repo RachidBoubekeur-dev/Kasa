@@ -6,13 +6,6 @@ import PropTypes from 'prop-types';
 import '../styles/Home.css';
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            housingsData: this.props.housingsData,
-        };
-    }
-
     render() {
         const { housingsData } = this.props;
         window.document.title =
