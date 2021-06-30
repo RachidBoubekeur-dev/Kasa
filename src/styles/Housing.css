@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   margin-top: 1.5em;
+  color: #FF6060;
+  font-family: "Montserrat";
 }
 .mainHousing > section > article > .slidePictures > .previous {
   position: absolute;
@@ -21,6 +23,152 @@
   border-radius: 10px;
   object-fit: cover;
   object-position: revert;
+}
+.mainHousing > section > article > h2 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 0.65em;
+  margin-top: 0.45em;
+}
+.mainHousing > section > article > h3 {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 0em;
+  margin-bottom: 0.7em;
+}
+.mainHousing > section > article > .divTags {
+  margin-bottom: 1em;
+}
+.mainHousing > section > article > .divTags > span {
+  background: #FF6060;
+  border-radius: 5px;
+  margin-right: 1em;
+  color: white;
+  font-size: 10px;
+  margin-top: 3px;
+  margin-bottom: 0.5em;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 4.5px;
+  padding-top: 4.5px;
+  display: inline-table;
+  text-align: center;
+}
+.mainHousing > section > article > .divRatingAndHost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainHousing > section > article > .divRatingAndHost > .divRating > span {
+  margin-right: 2px;
+}
+.mainHousing > section > article > .divRatingAndHost > .divRating > span > img {
+  margin-right: 1px;
+}
+.mainHousing > section > article > .divRatingAndHost > .divRating > span > .starGray {
+  filter: grayscale(1);
+  opacity: 0.25;
+}
+.mainHousing > section > article > .divRatingAndHost > .divHost {
+  display: flex;
+  align-items: center;
+  text-align: end;
+}
+.mainHousing > section > article > .divRatingAndHost > .divHost > span {
+  margin-right: 0.8em;
+  font-size: 12px;
+  font-weight: 500;
+}
+.mainHousing > section > article > .divRatingAndHost > .divHost > img {
+  width: 32px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.mainHousing > section > article > .divDetails {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+}
+.mainHousing > section > article > .divDetails > .divDescription {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.23em;
+  padding: 0px;
+}
+.mainHousing > section > article > .divDetails > .divDescription > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0px;
+}
+.mainHousing > section > article > .divDetails > .divDescription > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+}
+.mainHousing > section > article > .divDetails > .divDescription > div {
+  background: #f6f6f6;
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  height: 120px;
+  max-height: 120px;
+  overflow: auto;
+}
+.mainHousing > section > article > .divDetails > .divDescription > div > p {
+  font-size: 12px;
+  margin: 0px;
+}
+.mainHousing > section > article > .divDetails > .divEquipements {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.35em;
+  padding: 0px;
+}
+.mainHousing > section > article > .divDetails > .divEquipements > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0px;
+}
+.mainHousing > section > article > .divDetails > .divEquipements > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(90deg);
+}
+.mainHousing > section > article > .divDetails > .divEquipements > div {
+  background: #f6f6f6;
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  height: 102px;
+  max-height: 102px;
+  overflow: auto;
+}
+.mainHousing > section > article > .divDetails > .divEquipements > div > p {
+  font-size: 12px;
+  margin: 0px;
+  margin-bottom: 2px;
 }
 
 /*# sourceMappingURL=Housing.css.map */

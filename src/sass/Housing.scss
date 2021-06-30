@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 1.5em;
+    color: $color1;
+    font-family: $police1;
     & > .slidePictures {
         & > .previous {
             position: absolute;
@@ -23,6 +25,154 @@
                 border-radius: 10px;
                 object-fit: cover;
                 object-position: revert;
+            }
+        }
+    }
+    & > h2 {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 0.65em;
+        margin-top: 0.45em;
+    }
+    & > h3 {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 0em;
+        margin-bottom: 0.7em;
+    }
+    & > .divTags {
+        margin-bottom: 1em;
+        & > span {
+            background: $color1;
+            border-radius: 5px;
+            margin-right: 1em;
+            color: white;
+            font-size: 10px;
+            margin-top: 3px;
+            margin-bottom: 0.5em;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 4.5px;
+            padding-top: 4.5px;
+            display: inline-table;
+            text-align: center;
+        }
+    }
+    & > .divRatingAndHost {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > .divRating {
+            & > span {
+                margin-right: 2px;
+                & > img {
+                    margin-right: 1px;
+                }
+                & > .starGray {
+                    filter: grayscale(1);
+                    opacity: 0.25;
+                }
+            }
+        }
+        & > .divHost {
+            display: flex;
+            align-items: center;
+            text-align: end;
+            & > span {
+                margin-right: 0.8em;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            & > img {
+                width: 32px;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+        }
+    }
+    & > .divDetails {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3px;
+        & > .divDescription {
+            background: #f6f6f6;
+            border-radius: 5px;
+            margin-top: 1.23em;
+            padding: 0px;
+            & > p {
+                background: $color1;
+                color: white;
+                font-size: 13px;
+                padding-top: 6.5px;
+                padding-bottom: 7px;
+                padding-left: 11px;
+                padding-right: 11px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                margin: 0px;
+                & > img {
+                    width: 9px;
+                    height: 15px;
+                    transform: rotate(270deg);
+                }
+            }
+            & > div {
+                background: #f6f6f6;
+                padding-top: 20px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 5px;
+                border-radius: 5px;
+                height: 120px;
+                max-height: 120px;
+                overflow: auto;
+                & > p {
+                    font-size: 12px;
+                    margin: 0px;
+                }
+            }
+        }
+        & > .divEquipements {
+            background: #f6f6f6;
+            border-radius: 5px;
+            margin-top: 1.35em;
+            padding: 0px;
+            & > p {
+                background: $color1;
+                color: white;
+                font-size: 13px;
+                padding-top: 6.5px;
+                padding-bottom: 7px;
+                padding-left: 11px;
+                padding-right: 11px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                margin: 0px;
+                & > img {
+                    width: 9px;
+                    height: 15px;
+                    transform: rotate(90deg);
+                }
+            }
+            & > div {
+                background: #f6f6f6;
+                padding-top: 20px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 2px;
+                border-radius: 5px;
+                height: 102px;
+                max-height: 102px;
+                overflow: auto;
+                & > p {
+                    font-size: 12px;
+                    margin: 0px;
+                    margin-bottom: 2px;
+                }
             }
         }
     }
