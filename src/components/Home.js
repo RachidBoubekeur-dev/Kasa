@@ -8,6 +8,7 @@ import '../styles/Home.css';
 export default class Home extends Component {
     render() {
         const { housingsData } = this.props;
+        window.scrollTo(0, 0);
         window.document.title =
             'Kasa - leaders de la location d’appartements entre particuliers en France';
         return (

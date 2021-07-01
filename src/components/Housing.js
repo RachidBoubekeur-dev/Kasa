@@ -7,6 +7,7 @@ import star from '../assets/star.png';
 
 export default class Housing extends Component {
     render() {
+        window.scrollTo(0, 0);
         const { id } = this.props.match.params;
         const { housingsData } = this.props;
         const houseData = housingsData.filter((house) => {
@@ -34,6 +35,27 @@ export default class Housing extends Component {
                 );
             }
             return arrayRating;
+        };
+
+        const openDivElement = (divElement) => {
+            let divElementImg = document.querySelector(
+                `${divElement} > p > img`
+            );
+            let divElementDiv = document.querySelector(`${divElement} > div`);
+
+            if (divElementImg.alt === 'Déployer') {
+                divElementImg.alt = 'Réduire';
+                divElementImg.style.transform = 'rotate(90deg)';
+                divElementDiv.style.height = 'initial';
+                divElementDiv.style.paddingTop = '20px';
+                divElementDiv.style.paddingBottom = '5px';
+            } else {
+                divElementImg.alt = 'Déployer';
+                divElementImg.style.transform = 'rotate(270deg)';
+                divElementDiv.style.height = '0px';
+                divElementDiv.style.paddingTop = '0px';
+                divElementDiv.style.paddingBottom = '0px';
+            }
         };
 
         return (
@@ -85,7 +107,13 @@ export default class Housing extends Component {
                                 </div>
                                 <div className="divDetails">
                                     <div className="divDescription">
-                                        <p>
+                                        <p
+                                            onClick={() =>
+                                                openDivElement(
+                                                    '.divDescription'
+                                                )
+                                            }
+                                        >
                                             Description
                                             <img src={chevron} alt="Déployer" />
                                         </p>
@@ -94,7 +122,13 @@ export default class Housing extends Component {
                                         </div>
                                     </div>
                                     <div className="divEquipements">
-                                        <p>
+                                        <p
+                                            onClick={() =>
+                                                openDivElement(
+                                                    '.divEquipements'
+                                                )
+                                            }
+                                        >
                                             Équipements
                                             <img src={chevron} alt="Réduire" />
                                         </p>
