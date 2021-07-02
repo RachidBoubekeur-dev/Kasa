@@ -6,23 +6,29 @@
   color: #FF6060;
   font-family: "Montserrat";
 }
-.mainHousing > section > article > .slidePictures > .previous {
+.mainHousing > section > article > .slideShow > .slideControl > .previous {
   position: absolute;
-  margin-left: 7px;
-  margin-top: 36%;
+  padding-bottom: 37%;
+  padding-top: 36.5%;
+  padding-left: 2.5%;
+  padding-right: 13%;
 }
-.mainHousing > section > article > .slidePictures > .next {
+.mainHousing > section > article > .slideShow > .slideControl > .next {
   position: absolute;
-  margin-top: 36%;
-  margin-left: 83.5%;
+  margin-left: 70%;
   transform: rotate(180deg);
+  padding-bottom: 37%;
+  padding-top: 36.5%;
+  padding-left: 2.5%;
+  padding-right: 13%;
 }
-.mainHousing > section > article > .slidePictures > div > img {
+.mainHousing > section > article > .slideShow > .slidePictures > img {
   width: 100%;
   height: 255px;
   border-radius: 10px;
   object-fit: cover;
   object-position: revert;
+  transition: all 0.5s;
 }
 .mainHousing > section > article > h2 {
   font-weight: 500;
@@ -84,18 +90,18 @@
   border-radius: 15px;
   object-fit: cover;
 }
-.mainHousing > section > article > .divDetails {
+.mainHousing > section > article > .divCollapse {
   display: flex;
   flex-direction: column;
   margin-top: 3px;
 }
-.mainHousing > section > article > .divDetails > .divDescription {
+.mainHousing > section > article > .divCollapse > .divDescription {
   background: #f6f6f6;
   border-radius: 5px;
   margin-top: 1.23em;
   padding: 0px;
 }
-.mainHousing > section > article > .divDetails > .divDescription > p {
+.mainHousing > section > article > .divCollapse > .divDescription > p {
   background: #FF6060;
   color: white;
   font-size: 13px;
@@ -106,16 +112,15 @@
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
   margin: 0px;
 }
-.mainHousing > section > article > .divDetails > .divDescription > p > img {
+.mainHousing > section > article > .divCollapse > .divDescription > p > img {
   width: 9px;
   height: 15px;
   transform: rotate(270deg);
   transition: all 0.35s;
 }
-.mainHousing > section > article > .divDetails > .divDescription > div {
+.mainHousing > section > article > .divCollapse > .divDescription > div {
   background: #f6f6f6;
   border-radius: 5px;
   padding-top: 0px;
@@ -127,17 +132,17 @@
   overflow: auto;
   transition: all 0.2s;
 }
-.mainHousing > section > article > .divDetails > .divDescription > div > p {
+.mainHousing > section > article > .divCollapse > .divDescription > div > p {
   font-size: 12px;
   margin: 0px;
 }
-.mainHousing > section > article > .divDetails > .divEquipements {
+.mainHousing > section > article > .divCollapse > .divEquipements {
   background: #f6f6f6;
   border-radius: 5px;
   margin-top: 1.35em;
   padding: 0px;
 }
-.mainHousing > section > article > .divDetails > .divEquipements > p {
+.mainHousing > section > article > .divCollapse > .divEquipements > p {
   background: #FF6060;
   color: white;
   font-size: 13px;
@@ -148,27 +153,25 @@
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
   margin: 0px;
 }
-.mainHousing > section > article > .divDetails > .divEquipements > p > img {
+.mainHousing > section > article > .divCollapse > .divEquipements > p > img {
   width: 9px;
   height: 15px;
-  transform: rotate(90deg);
+  transform: rotate(270deg);
   transition: all 0.35s;
 }
-.mainHousing > section > article > .divDetails > .divEquipements > div {
+.mainHousing > section > article > .divCollapse > .divEquipements > div {
   background: #f6f6f6;
-  padding-top: 20px;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 2px;
   border-radius: 5px;
+  height: 0px;
   max-height: 102px;
   overflow: auto;
   transition: all 0.2s;
 }
-.mainHousing > section > article > .divDetails > .divEquipements > div > p {
+.mainHousing > section > article > .divCollapse > .divEquipements > div > p {
   font-size: 12px;
   margin: 0px;
   margin-bottom: 2px;
