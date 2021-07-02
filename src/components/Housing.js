@@ -18,6 +18,36 @@ export default class Housing extends Component {
             window.document.title = `Kasa - ${title}`;
         };
 
+        const controlSlideShow = (arrayPictures, action) => {
+            let pictureActive = document.querySelector('.slidePictures > img');
+            let idPicture = parseInt(pictureActive.id);
+            if (action === 'Next') {
+                if (arrayPictures.length - 1 > idPicture) {
+                    pictureActive.id = `${idPicture + 1}`;
+                    pictureActive.style.opacity = '0';
+                    pictureActive.src = arrayPictures[idPicture + 1];
+                    pictureActive.style.opacity = '1';
+                } else {
+                    pictureActive.id = '0';
+                    pictureActive.style.opacity = '0';
+                    pictureActive.src = arrayPictures[0];
+                    pictureActive.style.opacity = '1';
+                }
+            } else {
+                if (idPicture !== 0) {
+                    pictureActive.id = `${idPicture - 1}`;
+                    pictureActive.style.opacity = '0';
+                    pictureActive.src = arrayPictures[idPicture - 1];
+                    pictureActive.style.opacity = '1';
+                } else {
+                    pictureActive.id = `${arrayPictures.length - 1}`;
+                    pictureActive.style.opacity = '0';
+                    pictureActive.src = arrayPictures.slice(-1);
+                    pictureActive.style.opacity = '1';
+                }
+            }
+        };
+
         const getRating = (rating) => {
             let arrayRating = [];
             for (let i = 1; i < 6; i++) {
@@ -37,7 +67,7 @@ export default class Housing extends Component {
             return arrayRating;
         };
 
-        const openDivElement = (divElement) => {
+        const openDivCollapse = (divElement) => {
             let divElementImg = document.querySelector(
                 `${divElement} > p > img`
             );
@@ -64,19 +94,37 @@ export default class Housing extends Component {
                     {houseData.length > 0 ? (
                         houseData.map((house) => (
                             <article key={house.id}>
-                                <div className="slidePictures">
-                                    <img
-                                        className="previous"
-                                        src={chevron}
-                                        alt="Previous"
-                                    />
-                                    <img
-                                        className="next"
-                                        src={chevron}
-                                        alt="Next"
-                                    />
-                                    <div>
+                                {setTitle(house.title)}
+                                <div className="slideShow">
+                                    {house.pictures.length > 1 && (
+                                        <div className="slideControl">
+                                            <img
+                                                className="previous"
+                                                src={chevron}
+                                                alt="Previous"
+                                                onClick={() =>
+                                                    controlSlideShow(
+                                                        house.pictures,
+                                                        'Previous'
+                                                    )
+                                                }
+                                            />
+                                            <img
+                                                className="next"
+                                                src={chevron}
+                                                alt="Next"
+                                                onClick={() =>
+                                                    controlSlideShow(
+                                                        house.pictures,
+                                                        'Next'
+                                                    )
+                                                }
+                                            />
+                                        </div>
+                                    )}
+                                    <div className="slidePictures">
                                         <img
+                                            id="0"
                                             src={house.pictures[0]}
                                             alt={house.title}
                                         />
@@ -105,11 +153,11 @@ export default class Housing extends Component {
                                         />
                                     </div>
                                 </div>
-                                <div className="divDetails">
+                                <div className="divCollapse">
                                     <div className="divDescription">
                                         <p
                                             onClick={() =>
-                                                openDivElement(
+                                                openDivCollapse(
                                                     '.divDescription'
                                                 )
                                             }
@@ -124,13 +172,13 @@ export default class Housing extends Component {
                                     <div className="divEquipements">
                                         <p
                                             onClick={() =>
-                                                openDivElement(
+                                                openDivCollapse(
                                                     '.divEquipements'
                                                 )
                                             }
                                         >
                                             Équipements
-                                            <img src={chevron} alt="Réduire" />
+                                            <img src={chevron} alt="Déployer" />
                                         </p>
                                         <div>
                                             {house.equipments.map(
@@ -143,7 +191,6 @@ export default class Housing extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                {setTitle(house.title)}
                             </article>
                         ))
                     ) : (
