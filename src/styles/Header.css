@@ -14,6 +14,7 @@
   color: #FF6060;
   text-decoration: none;
   font-weight: 500;
+  cursor: default;
 }
 .navHeader > ul > li > .active {
   text-decoration: underline;
@@ -38,6 +39,9 @@
   }
   .navHeader > ul > li {
     font-size: 1em;
+  }
+  .navHeader > ul > li > a {
+    cursor: pointer;
   }
   .navHeader > ul > li:nth-child(1) {
     flex: auto;

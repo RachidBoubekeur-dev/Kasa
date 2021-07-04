@@ -13,6 +13,7 @@
             color: $color1;
             text-decoration: none;
             font-weight: 500;
+            cursor: default;
         }
         & > .active {
             text-decoration: underline;
@@ -38,6 +39,9 @@
         margin-top: 1.5em;
         & > ul > li {
             font-size: 1em;
+            & > a {
+                cursor: pointer;
+            }
             &:nth-child(1) {
                 flex: auto;
                 & > a > img {

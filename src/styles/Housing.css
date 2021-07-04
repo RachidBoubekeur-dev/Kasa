@@ -8,26 +8,35 @@
 }
 .mainHousing > section > article > .slideShow > .slideControl > .previous {
   position: absolute;
-  padding-bottom: 37%;
-  padding-top: 36.5%;
+  padding-bottom: 118.5px;
+  padding-top: 116.5px;
   padding-left: 2.5%;
-  padding-right: 13%;
+  width: 12px;
 }
 .mainHousing > section > article > .slideShow > .slideControl > .next {
   position: absolute;
-  margin-left: 70%;
+  right: 4.9%;
   transform: rotate(180deg);
-  padding-bottom: 37%;
-  padding-top: 36.5%;
+  padding-bottom: 118.5px;
+  padding-top: 116.5px;
   padding-left: 2.5%;
-  padding-right: 13%;
+  width: 12px;
+}
+.mainHousing > section > article > .slideShow > .slidePictures > span {
+  position: absolute;
+  width: 90%;
+  text-align: center;
+  margin-top: 221px;
+  color: white;
+  display: none;
 }
 .mainHousing > section > article > .slideShow > .slidePictures > img {
   width: 100%;
   height: 255px;
+  max-height: 415px;
   border-radius: 10px;
   object-fit: cover;
-  object-position: revert;
+  object-position: center;
   transition: all 0.5s;
 }
 .mainHousing > section > article > h2 {
@@ -70,6 +79,7 @@
 }
 .mainHousing > section > article > .divRatingAndHost > .divRating > span > img {
   margin-right: 1px;
+  width: 15px;
 }
 .mainHousing > section > article > .divRatingAndHost > .divRating > span > .starGray {
   filter: grayscale(1);
@@ -93,6 +103,7 @@
 .mainHousing > section > article > .divCollapse {
   display: flex;
   flex-direction: column;
+  align-self: center;
   margin-top: 3px;
 }
 .mainHousing > section > article > .divCollapse > .divDescription {
@@ -100,6 +111,7 @@
   border-radius: 5px;
   margin-top: 1.23em;
   padding: 0px;
+  max-width: 582px;
 }
 .mainHousing > section > article > .divCollapse > .divDescription > p {
   background: #FF6060;
@@ -132,7 +144,7 @@
   overflow: auto;
   transition: all 0.2s;
 }
-.mainHousing > section > article > .divCollapse > .divDescription > div > p {
+.mainHousing > section > article > .divCollapse > .divDescription > div p {
   font-size: 12px;
   margin: 0px;
 }
@@ -141,6 +153,7 @@
   border-radius: 5px;
   margin-top: 1.35em;
   padding: 0px;
+  max-width: 582px;
 }
 .mainHousing > section > article > .divCollapse > .divEquipements > p {
   background: #FF6060;
@@ -175,6 +188,250 @@
   font-size: 12px;
   margin: 0px;
   margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainHousing > section > article > .slideShow > .slideControl > .previous {
+    position: absolute;
+    padding-bottom: 137.5px;
+    padding-top: 147.5px;
+    padding-left: 2.5%;
+    padding-right: 3%;
+    width: 20px;
+  }
+  .mainHousing > section > article > .slideShow > .slideControl > .next {
+    position: absolute;
+    right: 4.9%;
+    transform: rotate(180deg);
+    padding-bottom: 143.5px;
+    padding-top: 141.5px;
+    padding-left: 2.5%;
+    padding-right: 3%;
+    width: 20px;
+  }
+  .mainHousing > section > article > .slideShow > .slidePictures > span {
+    display: block;
+    margin-top: 272px;
+  }
+  .mainHousing > section > article > .slideShow > .slidePictures > img {
+    height: 315px;
+  }
+  .mainHousing > section > article > h2 {
+    font-size: 24px;
+    margin-bottom: 0.4em;
+  }
+  .mainHousing > section > article > .divTags > span {
+    font-size: 11px;
+    border-radius: 7px;
+  }
+  .mainHousing > section > article > .divRatingAndHost {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    margin-top: -112px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divRating > span > img {
+    margin-right: 3px;
+    width: 22px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost {
+    display: flex;
+    align-items: center;
+    text-align: end;
+    margin-bottom: 1em;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost > span {
+    font-size: 14px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost > img {
+    width: 44px;
+    border-radius: 30px;
+  }
+  .mainHousing > section > article > .divCollapse {
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: auto;
+    align-items: flex-start;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription {
+    width: 46%;
+    margin-top: 1.35em;
+    max-width: none;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > p {
+    font-size: 15px;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > div {
+    max-height: 128px;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > div > p {
+    font-size: 14.5px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements {
+    width: 46%;
+    max-width: none;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > p {
+    font-size: 15px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > div {
+    max-height: 128px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > div > p {
+    font-size: 14.5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainHousing > section > article > .slideShow {
+    margin-bottom: 10.5px;
+  }
+  .mainHousing > section > article > .slideShow > .slideControl > .previous {
+    padding-bottom: 141.5px;
+    padding-top: 165.5px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .mainHousing > section > article > .slideShow > .slideControl > .next {
+    padding-bottom: 158.5px;
+    padding-top: 148px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .mainHousing > section > article > .slideShow > .slidePictures > span {
+    margin-top: 309px;
+  }
+  .mainHousing > section > article > .slideShow > .slidePictures > img {
+    height: 360px;
+  }
+  .mainHousing > section > article > h2 {
+    font-size: 30px;
+    margin-bottom: 0.2em;
+  }
+  .mainHousing > section > article > h3 {
+    font-size: 16px;
+  }
+  .mainHousing > section > article > .divTags > span {
+    font-size: 12.5px;
+    border-radius: 9px;
+  }
+  .mainHousing > section > article > .divRatingAndHost {
+    margin-top: -125px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divRating > span > img {
+    margin-right: 5px;
+    width: 25px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost {
+    margin-bottom: 1.32em;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost > span {
+    font-size: 16px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost > img {
+    width: 50px;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mainHousing > section > article > .slideShow {
+    margin-bottom: 10.5px;
+  }
+  .mainHousing > section > article > .slideShow > .slideControl > .previous {
+    padding-bottom: 164.5px;
+    padding-top: 174.5px;
+    width: 46px;
+  }
+  .mainHousing > section > article > .slideShow > .slideControl > .next {
+    padding-bottom: 175.5px;
+    padding-top: 163px;
+    width: 46px;
+  }
+  .mainHousing > section > article > .slideShow > .slidePictures > span {
+    margin-top: 361px;
+    font-size: 18px;
+  }
+  .mainHousing > section > article > .slideShow > .slidePictures > img {
+    height: 415px;
+  }
+  .mainHousing > section > article > h2 {
+    font-size: 36px;
+    margin-bottom: 0.1em;
+  }
+  .mainHousing > section > article > h3 {
+    font-size: 18px;
+  }
+  .mainHousing > section > article > .divTags {
+    margin-top: 5px;
+  }
+  .mainHousing > section > article > .divTags > span {
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  .mainHousing > section > article > .divRatingAndHost {
+    margin-top: -148px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divRating > span > img {
+    margin-right: 8px;
+    width: 30px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost {
+    margin-bottom: 1.32em;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost > span {
+    font-size: 18px;
+  }
+  .mainHousing > section > article > .divRatingAndHost > .divHost > img {
+    width: 64px;
+    border-radius: 50px;
+  }
+  .mainHousing > section > article > .divCollapse {
+    margin-top: 0.5em;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > p > img {
+    width: 15px;
+    height: 26px;
+  }
+  .mainHousing > section > article > .divCollapse > .divDescription > div > p {
+    font-size: 18px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > p > img {
+    width: 15px;
+    height: 26px;
+  }
+  .mainHousing > section > article > .divCollapse > .divEquipements > div > p {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=Housing.css.map */

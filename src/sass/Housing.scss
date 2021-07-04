@@ -10,28 +10,37 @@
         & > .slideControl {
             & > .previous {
                 position: absolute;
-                padding-bottom: 37%;
-                padding-top: 36.5%;
+                padding-bottom: 118.5px;
+                padding-top: 116.5px;
                 padding-left: 2.5%;
-                padding-right: 13%;
+                width: 12px;
             }
             & > .next {
                 position: absolute;
-                margin-left: 70%;
+                right: 4.9%;
                 transform: rotate(180deg);
-                padding-bottom: 37%;
-                padding-top: 36.5%;
+                padding-bottom: 118.5px;
+                padding-top: 116.5px;
                 padding-left: 2.5%;
-                padding-right: 13%;
+                width: 12px;
             }
         }
         & > .slidePictures {
+            & > span {
+                position: absolute;
+                width: 90%;
+                text-align: center;
+                margin-top: 221px;
+                color: white;
+                display: none;
+            }
             & > img {
                 width: 100%;
                 height: 255px;
+                max-height: 415px;
                 border-radius: 10px;
                 object-fit: cover;
-                object-position: revert;
+                object-position: center;
                 transition: all 0.5s;
             }
         }
@@ -75,6 +84,7 @@
                 margin-right: 2px;
                 & > img {
                     margin-right: 1px;
+                    width: 15px;
                 }
                 & > .starGray {
                     filter: grayscale(1);
@@ -101,12 +111,14 @@
     & > .divCollapse {
         display: flex;
         flex-direction: column;
+        align-self: center;
         margin-top: 3px;
         & > .divDescription {
             background: #f6f6f6;
             border-radius: 5px;
             margin-top: 1.23em;
             padding: 0px;
+            max-width: 582px;
             & > p {
                 background: $color1;
                 color: white;
@@ -137,7 +149,7 @@
                 max-height: 120px;
                 overflow: auto;
                 transition: all 0.2s;
-                & > p {
+                & p {
                     font-size: 12px;
                     margin: 0px;
                 }
@@ -148,6 +160,7 @@
             border-radius: 5px;
             margin-top: 1.35em;
             padding: 0px;
+            max-width: 582px;
             & > p {
                 background: $color1;
                 color: white;
@@ -180,6 +193,278 @@
                     font-size: 12px;
                     margin: 0px;
                     margin-bottom: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mainHousing > section > article {
+        & > .slideShow {
+            & > .slideControl {
+                & > .previous {
+                    position: absolute;
+                    padding-bottom: 137.5px;
+                    padding-top: 147.5px;
+                    padding-left: 2.5%;
+                    padding-right: 3%;
+                    width: 20px;
+                }
+                & > .next {
+                    position: absolute;
+                    right: 4.9%;
+                    transform: rotate(180deg);
+                    padding-bottom: 143.5px;
+                    padding-top: 141.5px;
+                    padding-left: 2.5%;
+                    padding-right: 3%;
+                    width: 20px;
+                }
+            }
+            & > .slidePictures {
+                & > span {
+                    display: block;
+                    margin-top: 272px;
+                }
+                & > img {
+                    height: 315px;
+                }
+            }
+        }
+        & > h2 {
+            font-size: 24px;
+            margin-bottom: 0.4em;
+        }
+        & > .divTags > span {
+            font-size: 11px;
+            border-radius: 7px;
+        }
+        & > .divRatingAndHost {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column-reverse;
+            margin-top: -112px;
+            & > .divRating > span > img {
+                margin-right: 3px;
+                width: 22px;
+            }
+            & > .divHost {
+                display: flex;
+                align-items: center;
+                text-align: end;
+                margin-bottom: 1em;
+                & > span {
+                    font-size: 14px;
+                }
+                & > img {
+                    width: 44px;
+                    border-radius: 30px;
+                }
+            }
+        }
+        & > .divCollapse {
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: auto;
+            align-items: flex-start;
+            & > .divDescription {
+                width: 46%;
+                margin-top: 1.35em;
+                max-width: none;
+                & > p {
+                    font-size: 15px;
+                    & > img {
+                        width: 12px;
+                        height: 20px;
+                    }
+                }
+                & > div {
+                    max-height: 128px;
+                    & > p {
+                        font-size: 14.5px;
+                    }
+                }
+            }
+            & > .divEquipements {
+                width: 46%;
+                max-width: none;
+                & > p {
+                    font-size: 15px;
+                    & > img {
+                        width: 12px;
+                        height: 20px;
+                    }
+                }
+                & > div {
+                    max-height: 128px;
+                    & > p {
+                        font-size: 14.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mainHousing > section > article {
+        & > .slideShow {
+            margin-bottom: 10.5px;
+            & > .slideControl {
+                & > .previous {
+                    padding-bottom: 141.5px;
+                    padding-top: 165.5px;
+                    width: 35px;
+                    cursor: pointer;
+                }
+                & > .next {
+                    padding-bottom: 158.5px;
+                    padding-top: 148px;
+                    width: 35px;
+                    cursor: pointer;
+                }
+            }
+            & > .slidePictures {
+                & > span {
+                    margin-top: 309px;
+                }
+                & > img {
+                    height: 360px;
+                }
+            }
+        }
+        & > h2 {
+            font-size: 30px;
+            margin-bottom: 0.2em;
+        }
+        & > h3 {
+            font-size: 16px;
+        }
+        & > .divTags > span {
+            font-size: 12.5px;
+            border-radius: 9px;
+        }
+        & > .divRatingAndHost {
+            margin-top: -125px;
+            & > .divRating > span > img {
+                margin-right: 5px;
+                width: 25px;
+            }
+            & > .divHost {
+                margin-bottom: 1.32em;
+                & > span {
+                    font-size: 16px;
+                }
+                & > img {
+                    width: 50px;
+                }
+            }
+        }
+        & > .divCollapse {
+            & > .divDescription > p {
+                font-size: 16.5px;
+                cursor: pointer;
+            }
+            & > .divEquipements > p {
+                font-size: 16.5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .mainHousing > section > article {
+        & > .slideShow {
+            margin-bottom: 10.5px;
+            & > .slideControl {
+                & > .previous {
+                    padding-bottom: 164.5px;
+                    padding-top: 174.5px;
+                    width: 46px;
+                }
+                & > .next {
+                    padding-bottom: 175.5px;
+                    padding-top: 163px;
+                    width: 46px;
+                }
+            }
+            & > .slidePictures {
+                & > span {
+                    margin-top: 361px;
+                    font-size: 18px;
+                }
+                & > img {
+                    height: 415px;
+                }
+            }
+        }
+        & > h2 {
+            font-size: 36px;
+            margin-bottom: 0.1em;
+        }
+        & > h3 {
+            font-size: 18px;
+        }
+        & > .divTags {
+            margin-top: 5px;
+            & > span {
+                font-size: 14px;
+                border-radius: 10px;
+            }
+        }
+        & > .divRatingAndHost {
+            margin-top: -148px;
+            & > .divRating > span > img {
+                margin-right: 8px;
+                width: 30px;
+            }
+            & > .divHost {
+                margin-bottom: 1.32em;
+                & > span {
+                    font-size: 18px;
+                }
+                & > img {
+                    width: 64px;
+                    border-radius: 50px;
+                }
+            }
+        }
+        & > .divCollapse {
+            margin-top: 0.5em;
+            & > .divDescription {
+                & > p {
+                    font-size: 18px;
+                    padding-top: 12.5px;
+                    padding-bottom: 11px;
+                    padding-left: 17px;
+                    padding-right: 17px;
+                    border-radius: 10px;
+                    & > img {
+                        width: 15px;
+                        height: 26px;
+                    }
+                }
+                & > div > p {
+                    font-size: 18px;
+                }
+            }
+            & > .divEquipements {
+                & > p {
+                    font-size: 18px;
+                    padding-top: 12.5px;
+                    padding-bottom: 11px;
+                    padding-left: 17px;
+                    padding-right: 17px;
+                    border-radius: 10px;
+                    & > img {
+                        width: 15px;
+                        height: 26px;
+                    }
+                }
+                & > div > p {
+                    font-size: 18px;
                 }
             }
         }

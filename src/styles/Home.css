@@ -40,7 +40,7 @@
   max-width: 340px;
   height: 255px;
   max-height: 340px;
-  cursor: pointer;
+  cursor: default;
   filter: brightness(1);
   transition: all 0.4s;
 }
@@ -86,6 +86,7 @@
   .mainHome > section > div > .housing > a {
     width: 340px;
     height: 340px;
+    cursor: pointer;
   }
   .mainHome > section > div > .housing > a > img {
     height: 340px;
