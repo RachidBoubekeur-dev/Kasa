@@ -17,7 +17,7 @@ export default class Routing extends Component {
     }
 
     componentDidMount() {
-        fetch('http://192.168.1.20:3000/housings.json')
+        fetch(`${window.origin}/housings.json`)
             .then((response) => response.json())
             .then((data) => this.setState({ housingsData: data }));
         setTimeout(() => {
