@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import '../styles/Housing.css';
 import chevron from '../assets/chevron.png';
 import star from '../assets/star.png';
+import Gallery from './Gallery';
 
 export default class Housing extends Component {
     render() {
@@ -14,40 +15,19 @@ export default class Housing extends Component {
             return house.id === id;
         });
 
+        /**
+         * setTitle - change le titre de la page
+         * @param  {String} title titre du logement
+         */
         const setTitle = (title) => {
             window.document.title = `Kasa - ${title}`;
         };
 
-        const controlSlideShow = (arrayPictures, action) => {
-            let pictureActive = document.querySelector('.slidePictures > img');
-            let idPicture = parseInt(pictureActive.id);
-            if (action === 'Next') {
-                if (arrayPictures.length - 1 > idPicture) {
-                    pictureActive.id = `${idPicture + 1}`;
-                    pictureActive.style.opacity = '0';
-                    pictureActive.src = arrayPictures[idPicture + 1];
-                    pictureActive.style.opacity = '1';
-                } else {
-                    pictureActive.id = '0';
-                    pictureActive.style.opacity = '0';
-                    pictureActive.src = arrayPictures[0];
-                    pictureActive.style.opacity = '1';
-                }
-            } else {
-                if (idPicture !== 0) {
-                    pictureActive.id = `${idPicture - 1}`;
-                    pictureActive.style.opacity = '0';
-                    pictureActive.src = arrayPictures[idPicture - 1];
-                    pictureActive.style.opacity = '1';
-                } else {
-                    pictureActive.id = `${arrayPictures.length - 1}`;
-                    pictureActive.style.opacity = '0';
-                    pictureActive.src = arrayPictures.slice(-1);
-                    pictureActive.style.opacity = '1';
-                }
-            }
-        };
-
+        /**
+         * getRating - Met en forme la note du logement
+         * @param  {String} rating note du logement
+         * @return {Array} arrayRating contient les notes sous forme HTML
+         */
         const getRating = (rating) => {
             let arrayRating = [];
             for (let i = 1; i < 6; i++) {
@@ -67,6 +47,10 @@ export default class Housing extends Component {
             return arrayRating;
         };
 
+        /**
+         * openDivCollapse - Ouvre ou ferme les collapses demandés
+         * @param  {String} divElement className concerner
+         */
         const openDivCollapse = (divElement) => {
             let divElementImg = document.querySelector(
                 `${divElement} > p > img`
@@ -76,9 +60,17 @@ export default class Housing extends Component {
             if (divElementImg.alt === 'Déployer') {
                 divElementImg.alt = 'Réduire';
                 divElementImg.style.transform = 'rotate(90deg)';
-                divElementDiv.style.height = 'initial';
                 divElementDiv.style.paddingTop = '20px';
-                divElementDiv.style.paddingBottom = '5px';
+                if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+                    divElementDiv.style.paddingBottom = '20px';
+                    divElementDiv.style.height = '128px';
+                } else if (window.innerWidth >= 1440) {
+                    divElementDiv.style.paddingBottom = '30px';
+                    divElementDiv.style.height = '200px';
+                } else {
+                    divElementDiv.style.paddingBottom = '5px';
+                    divElementDiv.style.height = 'initial';
+                }
             } else {
                 divElementImg.alt = 'Déployer';
                 divElementImg.style.transform = 'rotate(270deg)';
@@ -95,41 +87,7 @@ export default class Housing extends Component {
                         houseData.map((house) => (
                             <article key={house.id}>
                                 {setTitle(house.title)}
-                                <div className="slideShow">
-                                    {house.pictures.length > 1 && (
-                                        <div className="slideControl">
-                                            <img
-                                                className="previous"
-                                                src={chevron}
-                                                alt="Previous"
-                                                onClick={() =>
-                                                    controlSlideShow(
-                                                        house.pictures,
-                                                        'Previous'
-                                                    )
-                                                }
-                                            />
-                                            <img
-                                                className="next"
-                                                src={chevron}
-                                                alt="Next"
-                                                onClick={() =>
-                                                    controlSlideShow(
-                                                        house.pictures,
-                                                        'Next'
-                                                    )
-                                                }
-                                            />
-                                        </div>
-                                    )}
-                                    <div className="slidePictures">
-                                        <img
-                                            id="0"
-                                            src={house.pictures[0]}
-                                            alt={house.title}
-                                        />
-                                    </div>
-                                </div>
+                                <Gallery pictures={house.pictures} />
                                 <h2>{house.title}</h2>
                                 <h3>{house.location}</h3>
                                 <div className="divTags">
