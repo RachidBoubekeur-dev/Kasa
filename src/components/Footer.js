@@ -1,8 +1,8 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import logo from '../assets/logoWhite.svg';
 import '../styles/Footer.css';
 
-export default class Footer extends Component {
+export default class Footer extends PureComponent {
     render() {
         return (
             <footer>

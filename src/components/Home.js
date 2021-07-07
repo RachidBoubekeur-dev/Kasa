@@ -1,11 +1,11 @@
-import { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { PureComponent } from 'react';
 import homeImg from '../assets/home.png';
 import Error from './Error';
+import Thumb from './desktop/Thumb';
 import PropTypes from 'prop-types';
 import '../styles/Home.css';
 
-export default class Home extends Component {
+export default class Home extends PureComponent {
     render() {
         const { housingsData } = this.props;
         window.scrollTo(0, 0);
@@ -23,16 +23,12 @@ export default class Home extends Component {
                     <div>
                         {housingsData.length > 0 ? (
                             housingsData.map(({ id, cover, title }) => (
-                                <article
-                                    tabIndex="0"
-                                    className="housing"
+                                <Thumb
                                     key={id}
-                                >
-                                    <NavLink to={`/housing/${id}`} exact>
-                                        <img src={cover} alt={title} />
-                                        <h2>{title}</h2>
-                                    </NavLink>
-                                </article>
+                                    id={id}
+                                    cover={cover}
+                                    title={title}
+                                />
                             ))
                         ) : (
                             <Error code="504" />

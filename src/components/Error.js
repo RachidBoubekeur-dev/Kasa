@@ -1,9 +1,9 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../styles/Error.css';
 
-export default class Error extends Component {
+export default class Error extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
