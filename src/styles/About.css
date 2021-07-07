@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+.divDescription {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.23em;
+  padding: 0px;
+  max-width: 582px;
+}
+.divDescription > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.divDescription > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+  transition: all 0.35s;
+}
+.divDescription > div {
+  background: #f6f6f6;
+  border-radius: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 0px;
+  max-height: 120px;
+  overflow: auto;
+  transition: all 0.2s;
+}
+.divDescription > div p {
+  font-size: 12px;
+  margin: 0px;
+}
+
+.divEquipements {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.35em;
+  padding: 0px;
+  max-width: 582px;
+}
+.divEquipements > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.divEquipements > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+  transition: all 0.35s;
+}
+.divEquipements > div {
+  background: #f6f6f6;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  height: 0px;
+  max-height: 102px;
+  overflow: auto;
+  transition: all 0.2s;
+}
+.divEquipements > div > p {
+  font-size: 12px;
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+.divAbout {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.35em;
+  padding: 0px;
+  max-width: 1023px;
+}
+.divAbout > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.divAbout > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+  transition: all 0.35s;
+}
+.divAbout > div {
+  background: #f6f6f6;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  height: 0px;
+  max-height: 102px;
+  overflow: auto;
+  transition: all 0.2s;
+}
+.divAbout > div > p {
+  color: #FF6060;
+  font-size: 12px;
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .divDescription {
+    width: 46%;
+    margin-top: 1.35em;
+    max-width: none;
+  }
+  .divDescription > p {
+    font-size: 15px;
+  }
+  .divDescription > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .divDescription > div {
+    max-height: 128px;
+  }
+  .divDescription > div > p {
+    font-size: 14.5px;
+  }
+
+  .divEquipements {
+    width: 46%;
+    max-width: none;
+  }
+  .divEquipements > p {
+    font-size: 15px;
+  }
+  .divEquipements > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .divEquipements > div {
+    max-height: 128px;
+  }
+  .divEquipements > div > p {
+    font-size: 14.5px;
+  }
+
+  .divAbout > p {
+    font-size: 15px;
+  }
+  .divAbout > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .divAbout > div {
+    max-height: 128px;
+  }
+  .divAbout > div > p {
+    font-size: 14.5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .divDescription > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+
+  .divEquipements > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+
+  .divAbout > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .divDescription > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .divDescription > p > img {
+    width: 15px;
+    height: 26px;
+    margin-top: -1px;
+  }
+  .divDescription > div > p {
+    font-size: 18px;
+  }
+
+  .divEquipements > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .divEquipements > p > img {
+    width: 15px;
+    height: 26px;
+    margin-top: -1px;
+  }
+  .divEquipements > div > p {
+    font-size: 18px;
+  }
+
+  .divAbout > p {
+    font-size: 24px;
+    padding-left: 18px;
+    padding-right: 33px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .divAbout > p > img {
+    width: 15px;
+    height: 26px;
+    margin-top: 5px;
+  }
+  .divAbout > div > p {
+    font-size: 24px;
+  }
+}
+.mainAbout {
+  margin-bottom: 3.5%;
+}
+.mainAbout > section > .divImgAbout {
+  display: flex;
+  box-shadow: 0px 0px 8px 0px #d6d6d6;
+  border-radius: 25px;
+  margin-bottom: 0.8em;
+}
+.mainAbout > section > .divImgAbout > img {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: revert;
+  filter: brightness(0.7);
+}
+.mainAbout > section > .divCollapse {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+
+@media screen and (min-width: 2000px) {
+  .mainAbout {
+    margin-top: 5%;
+    margin-bottom: 17%;
+  }
+}
+
+/*# sourceMappingURL=About.css.map */
