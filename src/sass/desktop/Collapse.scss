@@ -1,0 +1,251 @@
+@import '../utils/variables';
+
+.divDescription {
+    background: #f6f6f6;
+    border-radius: 5px;
+    margin-top: 1.23em;
+    padding: 0px;
+    max-width: 582px;
+    & > p {
+        background: $color1;
+        color: white;
+        font-size: 13px;
+        padding-top: 6.5px;
+        padding-bottom: 7px;
+        padding-left: 11px;
+        padding-right: 11px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        & > img {
+            width: 9px;
+            height: 15px;
+            transform: rotate(270deg);
+            transition: all 0.35s;
+        }
+    }
+    & > div {
+        background: #f6f6f6;
+        border-radius: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 12px;
+        padding-right: 12px;
+        height: 0px;
+        max-height: 120px;
+        overflow: auto;
+        transition: all 0.2s;
+        & p {
+            font-size: 12px;
+            margin: 0px;
+        }
+    }
+}
+.divEquipements {
+    background: #f6f6f6;
+    border-radius: 5px;
+    margin-top: 1.35em;
+    padding: 0px;
+    max-width: 582px;
+    & > p {
+        background: $color1;
+        color: white;
+        font-size: 13px;
+        padding-top: 6.5px;
+        padding-bottom: 7px;
+        padding-left: 11px;
+        padding-right: 11px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        & > img {
+            width: 9px;
+            height: 15px;
+            transform: rotate(270deg);
+            transition: all 0.35s;
+        }
+    }
+    & > div {
+        background: #f6f6f6;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 5px;
+        height: 0px;
+        max-height: 102px;
+        overflow: auto;
+        transition: all 0.2s;
+        & > p {
+            font-size: 12px;
+            margin: 0px;
+            margin-bottom: 2px;
+        }
+    }
+}
+.divAbout {
+    background: #f6f6f6;
+    border-radius: 5px;
+    margin-top: 1.35em;
+    padding: 0px;
+    max-width: 1023px;
+    & > p {
+        background: $color1;
+        color: white;
+        font-size: 13px;
+        padding-top: 6.5px;
+        padding-bottom: 7px;
+        padding-left: 11px;
+        padding-right: 11px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        & > img {
+            width: 9px;
+            height: 15px;
+            transform: rotate(270deg);
+            transition: all 0.35s;
+        }
+    }
+    & > div {
+        background: #f6f6f6;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 5px;
+        height: 0px;
+        max-height: 102px;
+        overflow: auto;
+        transition: all 0.2s;
+        & > p {
+            color: $color1;
+            font-size: 12px;
+            margin: 0px;
+            margin-bottom: 2px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .divDescription {
+        width: 46%;
+        margin-top: 1.35em;
+        max-width: none;
+        & > p {
+            font-size: 15px;
+            & > img {
+                width: 12px;
+                height: 20px;
+            }
+        }
+        & > div {
+            max-height: 128px;
+            & > p {
+                font-size: 14.5px;
+            }
+        }
+    }
+    .divEquipements {
+        width: 46%;
+        max-width: none;
+        & > p {
+            font-size: 15px;
+            & > img {
+                width: 12px;
+                height: 20px;
+            }
+        }
+        & > div {
+            max-height: 128px;
+            & > p {
+                font-size: 14.5px;
+            }
+        }
+    }
+    .divAbout {
+        & > p {
+            font-size: 15px;
+            & > img {
+                width: 12px;
+                height: 20px;
+            }
+        }
+        & > div {
+            max-height: 128px;
+            & > p {
+                font-size: 14.5px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .divDescription > p {
+        font-size: 16.5px;
+        cursor: pointer;
+    }
+    .divEquipements > p {
+        font-size: 16.5px;
+        cursor: pointer;
+    }
+    .divAbout > p {
+        font-size: 16.5px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .divDescription {
+        & > p {
+            font-size: 18px;
+            padding-top: 12.5px;
+            padding-bottom: 11px;
+            padding-left: 17px;
+            padding-right: 17px;
+            border-radius: 10px;
+            & > img {
+                width: 15px;
+                height: 26px;
+                margin-top: -1px;
+            }
+        }
+        & > div > p {
+            font-size: 18px;
+        }
+    }
+    .divEquipements {
+        & > p {
+            font-size: 18px;
+            padding-top: 12.5px;
+            padding-bottom: 11px;
+            padding-left: 17px;
+            padding-right: 17px;
+            border-radius: 10px;
+            & > img {
+                width: 15px;
+                height: 26px;
+                margin-top: -1px;
+            }
+        }
+        & > div > p {
+            font-size: 18px;
+        }
+    }
+    .divAbout {
+        & > p {
+            font-size: 24px;
+            padding-left: 18px;
+            padding-right: 33px;
+            padding-top: 5px;
+            padding-bottom: 8px;
+            & > img {
+                width: 15px;
+                height: 26px;
+                margin-top: 5px;
+            }
+        }
+        & > div > p {
+            font-size: 24px;
+        }
+    }
+}

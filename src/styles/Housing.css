@@ -1,36 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
-.mainHousing > section > article {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5em;
-  color: #FF6060;
-  font-family: "Montserrat";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+.slideShow {
+  position: relative;
 }
-.mainHousing > section > article > .slideShow > .slideControl > .previous {
+.slideShow > .slideControl > .previous {
   position: absolute;
-  padding-bottom: 118.5px;
-  padding-top: 116.5px;
-  padding-left: 2.5%;
+  top: 48%;
+  left: 9px;
   width: 12px;
 }
-.mainHousing > section > article > .slideShow > .slideControl > .next {
+.slideShow > .slideControl > .next {
   position: absolute;
-  right: 4.9%;
+  right: 9px;
+  top: 48%;
   transform: rotate(180deg);
-  padding-bottom: 118.5px;
-  padding-top: 116.5px;
-  padding-left: 2.5%;
   width: 12px;
 }
-.mainHousing > section > article > .slideShow > .slidePictures > span {
+.slideShow > .slidePictures > span {
   position: absolute;
-  width: 90%;
-  text-align: center;
-  margin-top: 221px;
+  left: 47.5%;
+  bottom: 10%;
   color: white;
   display: none;
 }
-.mainHousing > section > article > .slideShow > .slidePictures > img {
+.slideShow > .slidePictures > img {
   width: 100%;
   height: 255px;
   max-height: 415px;
@@ -38,6 +32,362 @@
   object-fit: cover;
   object-position: center;
   transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .slideShow > .slideControl > .previous {
+    top: 47%;
+    width: 20px;
+  }
+  .slideShow > .slideControl > .next {
+    top: 47%;
+    width: 20px;
+  }
+  .slideShow > .slidePictures > span {
+    display: block;
+    left: 48.5%;
+    bottom: 9%;
+  }
+  .slideShow > .slidePictures > img {
+    height: 315px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slideShow {
+    margin-bottom: 10.5px;
+  }
+  .slideShow > .slideControl > .previous {
+    top: 44%;
+    left: 16px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .slideShow > .slideControl > .next {
+    top: 44%;
+    right: 16px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .slideShow > .slidePictures > span {
+    left: 49%;
+  }
+  .slideShow > .slidePictures > img {
+    height: 360px;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .slideShow {
+    margin-bottom: 10.5px;
+  }
+  .slideShow > .slideControl > .previous {
+    top: 41.5%;
+    left: 20px;
+    width: 46px;
+  }
+  .slideShow > .slideControl > .next {
+    top: 41.5%;
+    right: 20px;
+    width: 46px;
+  }
+  .slideShow > .slidePictures > span {
+    left: 49.5%;
+    font-size: 18px;
+  }
+  .slideShow > .slidePictures > img {
+    height: 415px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .slideShow > .slidePictures > span {
+    left: 49.9%;
+    font-size: 23px;
+  }
+}
+.tag {
+  background: #FF6060;
+  border-radius: 5px;
+  margin-right: 1em;
+  color: white;
+  font-size: 10px;
+  margin-top: 3px;
+  margin-bottom: 0.5em;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 4.5px;
+  padding-top: 4.5px;
+  display: inline-table;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .tag {
+    font-size: 11px;
+    border-radius: 7px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tag {
+    font-size: 12.5px;
+    border-radius: 9px;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .tag {
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}
+.divDescription {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.23em;
+  padding: 0px;
+  max-width: 582px;
+}
+.divDescription > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.divDescription > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+  transition: all 0.35s;
+}
+.divDescription > div {
+  background: #f6f6f6;
+  border-radius: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 0px;
+  max-height: 120px;
+  overflow: auto;
+  transition: all 0.2s;
+}
+.divDescription > div p {
+  font-size: 12px;
+  margin: 0px;
+}
+
+.divEquipements {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.35em;
+  padding: 0px;
+  max-width: 582px;
+}
+.divEquipements > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.divEquipements > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+  transition: all 0.35s;
+}
+.divEquipements > div {
+  background: #f6f6f6;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  height: 0px;
+  max-height: 102px;
+  overflow: auto;
+  transition: all 0.2s;
+}
+.divEquipements > div > p {
+  font-size: 12px;
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+.divAbout {
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 1.35em;
+  padding: 0px;
+  max-width: 1023px;
+}
+.divAbout > p {
+  background: #FF6060;
+  color: white;
+  font-size: 13px;
+  padding-top: 6.5px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.divAbout > p > img {
+  width: 9px;
+  height: 15px;
+  transform: rotate(270deg);
+  transition: all 0.35s;
+}
+.divAbout > div {
+  background: #f6f6f6;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  height: 0px;
+  max-height: 102px;
+  overflow: auto;
+  transition: all 0.2s;
+}
+.divAbout > div > p {
+  color: #FF6060;
+  font-size: 12px;
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .divDescription {
+    width: 46%;
+    margin-top: 1.35em;
+    max-width: none;
+  }
+  .divDescription > p {
+    font-size: 15px;
+  }
+  .divDescription > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .divDescription > div {
+    max-height: 128px;
+  }
+  .divDescription > div > p {
+    font-size: 14.5px;
+  }
+
+  .divEquipements {
+    width: 46%;
+    max-width: none;
+  }
+  .divEquipements > p {
+    font-size: 15px;
+  }
+  .divEquipements > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .divEquipements > div {
+    max-height: 128px;
+  }
+  .divEquipements > div > p {
+    font-size: 14.5px;
+  }
+
+  .divAbout > p {
+    font-size: 15px;
+  }
+  .divAbout > p > img {
+    width: 12px;
+    height: 20px;
+  }
+  .divAbout > div {
+    max-height: 128px;
+  }
+  .divAbout > div > p {
+    font-size: 14.5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .divDescription > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+
+  .divEquipements > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+
+  .divAbout > p {
+    font-size: 16.5px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .divDescription > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .divDescription > p > img {
+    width: 15px;
+    height: 26px;
+  }
+  .divDescription > div > p {
+    font-size: 18px;
+  }
+
+  .divEquipements > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .divEquipements > p > img {
+    width: 15px;
+    height: 26px;
+  }
+  .divEquipements > div > p {
+    font-size: 18px;
+  }
+
+  .divAbout > p {
+    font-size: 18px;
+    padding-top: 12.5px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 10px;
+  }
+  .divAbout > p > img {
+    width: 15px;
+    height: 26px;
+  }
+  .divAbout > div > p {
+    font-size: 18px;
+  }
+}
+.mainHousing > section > article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+  color: #FF6060;
+  font-family: "Montserrat";
 }
 .mainHousing > section > article > h2 {
   font-weight: 500;
@@ -53,21 +403,6 @@
 }
 .mainHousing > section > article > .divTags {
   margin-bottom: 1em;
-}
-.mainHousing > section > article > .divTags > span {
-  background: #FF6060;
-  border-radius: 5px;
-  margin-right: 1em;
-  color: white;
-  font-size: 10px;
-  margin-top: 3px;
-  margin-bottom: 0.5em;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-bottom: 4.5px;
-  padding-top: 4.5px;
-  display: inline-table;
-  text-align: center;
 }
 .mainHousing > section > article > .divRatingAndHost {
   display: flex;
@@ -106,123 +441,12 @@
   align-self: center;
   margin-top: 3px;
 }
-.mainHousing > section > article > .divCollapse > .divDescription {
-  background: #f6f6f6;
-  border-radius: 5px;
-  margin-top: 1.23em;
-  padding: 0px;
-  max-width: 582px;
-}
-.mainHousing > section > article > .divCollapse > .divDescription > p {
-  background: #FF6060;
-  color: white;
-  font-size: 13px;
-  padding-top: 6.5px;
-  padding-bottom: 7px;
-  padding-left: 11px;
-  padding-right: 11px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0px;
-}
-.mainHousing > section > article > .divCollapse > .divDescription > p > img {
-  width: 9px;
-  height: 15px;
-  transform: rotate(270deg);
-  transition: all 0.35s;
-}
-.mainHousing > section > article > .divCollapse > .divDescription > div {
-  background: #f6f6f6;
-  border-radius: 5px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 12px;
-  padding-right: 12px;
-  height: 0px;
-  max-height: 120px;
-  overflow: auto;
-  transition: all 0.2s;
-}
-.mainHousing > section > article > .divCollapse > .divDescription > div p {
-  font-size: 12px;
-  margin: 0px;
-}
-.mainHousing > section > article > .divCollapse > .divEquipements {
-  background: #f6f6f6;
-  border-radius: 5px;
-  margin-top: 1.35em;
-  padding: 0px;
-  max-width: 582px;
-}
-.mainHousing > section > article > .divCollapse > .divEquipements > p {
-  background: #FF6060;
-  color: white;
-  font-size: 13px;
-  padding-top: 6.5px;
-  padding-bottom: 7px;
-  padding-left: 11px;
-  padding-right: 11px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0px;
-}
-.mainHousing > section > article > .divCollapse > .divEquipements > p > img {
-  width: 9px;
-  height: 15px;
-  transform: rotate(270deg);
-  transition: all 0.35s;
-}
-.mainHousing > section > article > .divCollapse > .divEquipements > div {
-  background: #f6f6f6;
-  padding-left: 12px;
-  padding-right: 12px;
-  border-radius: 5px;
-  height: 0px;
-  max-height: 102px;
-  overflow: auto;
-  transition: all 0.2s;
-}
-.mainHousing > section > article > .divCollapse > .divEquipements > div > p {
-  font-size: 12px;
-  margin: 0px;
-  margin-bottom: 2px;
-}
 
 @media screen and (min-width: 768px) {
-  .mainHousing > section > article > .slideShow > .slideControl > .previous {
-    position: absolute;
-    padding-bottom: 137.5px;
-    padding-top: 147.5px;
-    padding-left: 2.5%;
-    padding-right: 3%;
-    width: 20px;
-  }
-  .mainHousing > section > article > .slideShow > .slideControl > .next {
-    position: absolute;
-    right: 4.9%;
-    transform: rotate(180deg);
-    padding-bottom: 143.5px;
-    padding-top: 141.5px;
-    padding-left: 2.5%;
-    padding-right: 3%;
-    width: 20px;
-  }
-  .mainHousing > section > article > .slideShow > .slidePictures > span {
-    display: block;
-    margin-top: 272px;
-  }
-  .mainHousing > section > article > .slideShow > .slidePictures > img {
-    height: 315px;
-  }
   .mainHousing > section > article > h2 {
     font-size: 24px;
     margin-bottom: 0.4em;
-  }
-  .mainHousing > section > article > .divTags > span {
-    font-size: 11px;
-    border-radius: 7px;
+    width: 70%;
   }
   .mainHousing > section > article > .divRatingAndHost {
     display: flex;
@@ -253,74 +477,14 @@
     align-self: auto;
     align-items: flex-start;
   }
-  .mainHousing > section > article > .divCollapse > .divDescription {
-    width: 46%;
-    margin-top: 1.35em;
-    max-width: none;
-  }
-  .mainHousing > section > article > .divCollapse > .divDescription > p {
-    font-size: 15px;
-  }
-  .mainHousing > section > article > .divCollapse > .divDescription > p > img {
-    width: 12px;
-    height: 20px;
-  }
-  .mainHousing > section > article > .divCollapse > .divDescription > div {
-    max-height: 128px;
-  }
-  .mainHousing > section > article > .divCollapse > .divDescription > div > p {
-    font-size: 14.5px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements {
-    width: 46%;
-    max-width: none;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > p {
-    font-size: 15px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > p > img {
-    width: 12px;
-    height: 20px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > div {
-    max-height: 128px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > div > p {
-    font-size: 14.5px;
-  }
 }
 @media screen and (min-width: 1024px) {
-  .mainHousing > section > article > .slideShow {
-    margin-bottom: 10.5px;
-  }
-  .mainHousing > section > article > .slideShow > .slideControl > .previous {
-    padding-bottom: 141.5px;
-    padding-top: 165.5px;
-    width: 35px;
-    cursor: pointer;
-  }
-  .mainHousing > section > article > .slideShow > .slideControl > .next {
-    padding-bottom: 158.5px;
-    padding-top: 148px;
-    width: 35px;
-    cursor: pointer;
-  }
-  .mainHousing > section > article > .slideShow > .slidePictures > span {
-    margin-top: 309px;
-  }
-  .mainHousing > section > article > .slideShow > .slidePictures > img {
-    height: 360px;
-  }
   .mainHousing > section > article > h2 {
     font-size: 30px;
     margin-bottom: 0.2em;
   }
   .mainHousing > section > article > h3 {
     font-size: 16px;
-  }
-  .mainHousing > section > article > .divTags > span {
-    font-size: 12.5px;
-    border-radius: 9px;
   }
   .mainHousing > section > article > .divRatingAndHost {
     margin-top: -125px;
@@ -338,36 +502,8 @@
   .mainHousing > section > article > .divRatingAndHost > .divHost > img {
     width: 50px;
   }
-  .mainHousing > section > article > .divCollapse > .divDescription > p {
-    font-size: 16.5px;
-    cursor: pointer;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > p {
-    font-size: 16.5px;
-    cursor: pointer;
-  }
 }
-@media screen and (min-width: 1440px) {
-  .mainHousing > section > article > .slideShow {
-    margin-bottom: 10.5px;
-  }
-  .mainHousing > section > article > .slideShow > .slideControl > .previous {
-    padding-bottom: 164.5px;
-    padding-top: 174.5px;
-    width: 46px;
-  }
-  .mainHousing > section > article > .slideShow > .slideControl > .next {
-    padding-bottom: 175.5px;
-    padding-top: 163px;
-    width: 46px;
-  }
-  .mainHousing > section > article > .slideShow > .slidePictures > span {
-    margin-top: 361px;
-    font-size: 18px;
-  }
-  .mainHousing > section > article > .slideShow > .slidePictures > img {
-    height: 415px;
-  }
+@media screen and (min-width: 1350px) {
   .mainHousing > section > article > h2 {
     font-size: 36px;
     margin-bottom: 0.1em;
@@ -377,10 +513,6 @@
   }
   .mainHousing > section > article > .divTags {
     margin-top: 5px;
-  }
-  .mainHousing > section > article > .divTags > span {
-    font-size: 14px;
-    border-radius: 10px;
   }
   .mainHousing > section > article > .divRatingAndHost {
     margin-top: -148px;
@@ -402,35 +534,11 @@
   .mainHousing > section > article > .divCollapse {
     margin-top: 0.5em;
   }
-  .mainHousing > section > article > .divCollapse > .divDescription > p {
-    font-size: 18px;
-    padding-top: 12.5px;
-    padding-bottom: 11px;
-    padding-left: 17px;
-    padding-right: 17px;
-    border-radius: 10px;
-  }
-  .mainHousing > section > article > .divCollapse > .divDescription > p > img {
-    width: 15px;
-    height: 26px;
-  }
-  .mainHousing > section > article > .divCollapse > .divDescription > div > p {
-    font-size: 18px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > p {
-    font-size: 18px;
-    padding-top: 12.5px;
-    padding-bottom: 11px;
-    padding-left: 17px;
-    padding-right: 17px;
-    border-radius: 10px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > p > img {
-    width: 15px;
-    height: 26px;
-  }
-  .mainHousing > section > article > .divCollapse > .divEquipements > div > p {
-    font-size: 18px;
+}
+@media screen and (min-width: 2000px) {
+  .mainHousing {
+    margin-top: 5%;
+    margin-bottom: 17%;
   }
 }
 

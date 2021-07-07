@@ -44,5 +44,11 @@
     cursor: pointer;
   }
 }
+@media screen and (min-width: 2000px) {
+  .divError {
+    margin-top: 20%;
+    margin-bottom: 18%;
+  }
+}
 
 /*# sourceMappingURL=Error.css.map */
