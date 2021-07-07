@@ -1,0 +1,174 @@
+@import './desktop/Gallery';
+@import './desktop/Tag';
+@import './desktop/Collapse';
+
+.mainHousing > section > article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    color: $color1;
+    font-family: $police1;
+    & > h2 {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 0.65em;
+        margin-top: 0.45em;
+    }
+    & > h3 {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 0em;
+        margin-bottom: 0.7em;
+    }
+    & > .divTags {
+        margin-bottom: 1em;
+    }
+    & > .divRatingAndHost {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > .divRating {
+            & > span {
+                margin-right: 2px;
+                & > img {
+                    margin-right: 1px;
+                    width: 15px;
+                }
+                & > .starGray {
+                    filter: grayscale(1);
+                    opacity: 0.25;
+                }
+            }
+        }
+        & > .divHost {
+            display: flex;
+            align-items: center;
+            text-align: end;
+            & > span {
+                margin-right: 0.8em;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            & > img {
+                width: 32px;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+        }
+    }
+    & > .divCollapse {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 3px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mainHousing > section > article {
+        & > h2 {
+            font-size: 24px;
+            margin-bottom: 0.4em;
+            width: 70%;
+        }
+        & > .divRatingAndHost {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column-reverse;
+            margin-top: -112px;
+            & > .divRating > span > img {
+                margin-right: 3px;
+                width: 22px;
+            }
+            & > .divHost {
+                display: flex;
+                align-items: center;
+                text-align: end;
+                margin-bottom: 1em;
+                & > span {
+                    font-size: 14px;
+                }
+                & > img {
+                    width: 44px;
+                    border-radius: 30px;
+                }
+            }
+        }
+        & > .divCollapse {
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: auto;
+            align-items: flex-start;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mainHousing > section > article {
+        & > h2 {
+            font-size: 30px;
+            margin-bottom: 0.2em;
+        }
+        & > h3 {
+            font-size: 16px;
+        }
+        & > .divRatingAndHost {
+            margin-top: -125px;
+            & > .divRating > span > img {
+                margin-right: 5px;
+                width: 25px;
+            }
+            & > .divHost {
+                margin-bottom: 1.32em;
+                & > span {
+                    font-size: 16px;
+                }
+                & > img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .mainHousing > section > article {
+        & > h2 {
+            font-size: 36px;
+            margin-bottom: 0.1em;
+        }
+        & > h3 {
+            font-size: 18px;
+        }
+        & > .divTags {
+            margin-top: 5px;
+        }
+        & > .divRatingAndHost {
+            margin-top: -148px;
+            & > .divRating > span > img {
+                margin-right: 8px;
+                width: 30px;
+            }
+            & > .divHost {
+                margin-bottom: 1.32em;
+                & > span {
+                    font-size: 18px;
+                }
+                & > img {
+                    width: 64px;
+                    border-radius: 50px;
+                }
+            }
+        }
+        & > .divCollapse {
+            margin-top: 0.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .mainHousing {
+        margin-top: 5%;
+        margin-bottom: 17%;
+    }
+}

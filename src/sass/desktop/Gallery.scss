@@ -1,0 +1,125 @@
+@import '../utils/variables';
+
+.slideShow {
+    position: relative;
+    & > .slideControl {
+        & > .previous {
+            position: absolute;
+            top: 48%;
+            left: 9px;
+            width: 12px;
+        }
+        & > .next {
+            position: absolute;
+            right: 9px;
+            top: 48%;
+            transform: rotate(180deg);
+            width: 12px;
+        }
+    }
+    & > .slidePictures {
+        & > span {
+            position: absolute;
+            left: 47.5%;
+            bottom: 10%;
+            color: white;
+            display: none;
+        }
+        & > img {
+            width: 100%;
+            height: 255px;
+            max-height: 415px;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+            transition: all 0.5s;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slideShow {
+        & > .slideControl {
+            & > .previous {
+                top: 47%;
+                width: 20px;
+            }
+            & > .next {
+                top: 47%;
+                width: 20px;
+            }
+        }
+        & > .slidePictures {
+            & > span {
+                display: block;
+                left: 48.5%;
+                bottom: 9%;
+            }
+            & > img {
+                height: 315px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .slideShow {
+        margin-bottom: 10.5px;
+        & > .slideControl {
+            & > .previous {
+                top: 44%;
+                left: 16px;
+                width: 35px;
+                cursor: pointer;
+            }
+            & > .next {
+                top: 44%;
+                right: 16px;
+                width: 35px;
+                cursor: pointer;
+            }
+        }
+        & > .slidePictures {
+            & > span {
+                left: 49%;
+            }
+            & > img {
+                height: 360px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .slideShow {
+        margin-bottom: 10.5px;
+        & > .slideControl {
+            & > .previous {
+                top: 41.5%;
+                left: 20px;
+                width: 46px;
+            }
+            & > .next {
+                top: 41.5%;
+                right: 20px;
+                width: 46px;
+            }
+        }
+        & > .slidePictures {
+            & > span {
+                left: 49.5%;
+                font-size: 18px;
+            }
+            & > img {
+                height: 415px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .slideShow > .slidePictures > span {
+        left: 49.9%;
+        font-size: 23px;
+    }
+}

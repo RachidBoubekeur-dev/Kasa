@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+.divApp {
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0em;
+  width: 90%;
+  max-width: 1585px;
+}
+.divApp > div > .divLoading {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.divApp > div > .divLoading > img {
+  width: auto;
+  position: fixed;
+  align-self: center;
+}
+
+/*# sourceMappingURL=App.css.map */

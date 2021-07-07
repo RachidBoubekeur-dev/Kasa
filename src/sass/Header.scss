@@ -1,0 +1,56 @@
+@import './utils/variables';
+
+.navHeader > ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding-inline-start: 0px;
+    & > li {
+        font-family: $police1;
+        font-weight: bold;
+        font-size: 0.8em;
+        & > a {
+            color: $color1;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: default;
+        }
+        & > .active {
+            text-decoration: underline;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &:nth-child(1) {
+            flex: auto;
+            & > a > img {
+                width: 125px;
+            }
+        }
+        &:nth-child(2), &:nth-child(3) {
+            align-self: center;
+            margin-left: 1em;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navHeader {
+        margin-top: 1.5em;
+        & > ul > li {
+            font-size: 1em;
+            & > a {
+                cursor: pointer;
+            }
+            &:nth-child(1) {
+                flex: auto;
+                & > a > img {
+                    width: 150px;
+                }
+            }
+            &:nth-child(2), &:nth-child(3) {
+                margin-left: 2.7em;
+            }
+        }
+    }
+}
