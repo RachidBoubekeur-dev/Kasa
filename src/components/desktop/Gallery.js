@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import chevron from '../assets/chevron.png';
+import React, { PureComponent } from 'react';
+import chevron from '../../assets/chevron.png';
 import PropTypes from 'prop-types';
 import Hammer from 'react-hammerjs';
 
-export default class Gallery extends Component {
+export default class Gallery extends PureComponent {
     render() {
         const { pictures } = this.props;
 
@@ -47,6 +47,7 @@ export default class Gallery extends Component {
                 }
             }
         };
+
         return (
             <div className="slideShow">
                 {pictures.length > 1 && (
